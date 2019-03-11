@@ -1,0 +1,363 @@
+
+
+
+def mainfun():
+    from tkinter import messagebox
+    gradelist = []
+    creditlist = []
+
+    root = Tk()
+    root.configure(background="pink")
+    label_0 = Label(root, text="SEMESTER 1",fg="purple",width=20,font=("bold", 20))
+    label_0.grid(row=0,column=0)
+    label_1 = Label(root, text="GRADE",width=20,font=("bold", 10))
+    label_1.grid(row=1,column=3)
+    label_2 = Label(root, text="CREDIT",width=20,font=("bold", 10))
+    label_2.grid(row=1,column=4)
+    label_3 = Label(root, text="Subject 1",bg="pink",width=20,font=("bold", 10))
+    label_3.grid(row=2,column=0)
+    entry_3 = Entry(root)
+    gradelist.append(entry_3.get())
+    entry_3.grid(row=2,column=3)
+    entry_3_1 = Entry(root)
+    entry_3_1.grid(row=2,column=4)
+    creditlist.append(entry_3_1.get())
+    label_4 = Label(root, text="Subject 2",bg="pink",width=20,font=("bold", 10))
+    label_4.grid(row=3,column=0)
+    entry_4 = Entry(root)
+    entry_4.grid(row=3,column=3)
+    
+    gradelist.append(entry_4.get())
+    entry_4_1 = Entry(root)
+    entry_4_1.grid(row=3,column=4)
+    creditlist.append(entry_4_1.get())
+    label_5 = Label(root, text="Subject 3",bg="pink",width=20,font=("bold", 10))
+    label_5.grid(row=4,column=0)
+    entry_5 = Entry(root)
+    entry_5.grid(row=4,column=3)
+    
+    gradelist.append(entry_5.get())
+    entry_5_1 = Entry(root)
+    creditlist.append(entry_5_1.get())
+    entry_5_1.grid(row=4,column=4)
+    label_6 = Label(root, text="Subject 4",bg="pink",width=20,font=("bold", 10))
+    label_6.grid(row=5,column=0)
+    entry_6 = Entry(root)
+    entry_6.grid(row=5,column=3)
+    
+    gradelist.append(entry_6.get())
+    entry_6_1 = Entry(root)
+    entry_6_1.grid(row=5,column=4)
+    creditlist.append(entry_6_1.get())
+    label_7 = Label(root, text="Subject 5",bg="pink",width=20,font=("bold", 10))
+    label_7.grid(row=6,column=0)
+    entry_7 = Entry(root)
+    
+    entry_7.grid(row=6,column=3)
+    
+    gradelist.append(entry_7.get())
+    
+    entry_7_1 = Entry(root)
+    entry_7_1.grid(row=6,column=4)
+    creditlist.append(entry_7_1.get())
+    label_8 = Label(root, text="Subject 6",bg="pink",width=20,font=("bold", 10))
+    label_8.grid(row=7,column=0)
+    entry_8 = Entry(root)
+    
+    gradelist.append(entry_8.get())
+    entry_8.grid(row=7,column=3)
+    entry_8_1 = Entry(root)
+    entry_8_1.grid(row=7,column=4)
+    creditlist.append(entry_8_1.get())
+    def grade(grd):
+        dictionary = {'O':10,'A+':9,'A':8,'B+':7,'B':6,'C':5,'D':4,'E':3,'F':2,'I':1,'R':0 }
+        return(dictionary[grd])
+    '''def calculate():
+        
+        total =0
+        gained = 0
+        for i in range(len(gradelist)):
+            print(10*creditlist[i])
+            print(grade(gradelist[i])*creditlist[i])'''
+    tgpa_1 =[]
+    def calculate():
+        total = int(entry_3_1.get())*10 + int(entry_4_1.get())*10 + int(entry_5_1.get())*10 + int(entry_6_1.get())*10 + int(entry_7_1.get())*10 + int(entry_8_1.get())*10
+        gained = int(entry_3_1.get())*(grade(entry_3.get())) + int(entry_4_1.get())*(grade(entry_4.get())) + int(entry_5_1.get())*(grade(entry_5.get())) + int(entry_6_1.get())*(grade(entry_6.get())) + int(entry_7_1.get())*(grade(entry_7.get())) + int(entry_8_1.get())*(grade(entry_8.get()))
+        t = (gained/total)*10
+        t = float("{0:.2f}".format(t))
+        laavel = Label(root, text=str(t),width=20,font=("bold", 10))
+        laavel.grid(row=2,column=8)
+        tgpa_1.append(t)
+        return(t)  
+        print(tgpa_1)
+    
+    btn1=Button(root, text='CALCULATE TGAP',width=20,bg='brown',fg='white') 
+    btn1.grid(row=2,column=6)
+    btn1.config(command = calculate)
+
+
+
+
+
+
+    label_10 = Label(root, text="SEMESTER 2",fg="purple",width=20,font=("bold", 20))
+    label_10.grid(row=10,column=0)
+    label_11 = Label(root, text="GRADE",width=20,font=("bold", 10))
+    label_11.grid(row=11,column=3)
+    label_12 = Label(root, text="CREDIT",width=20,font=("bold", 10))
+    label_12.grid(row=11,column=4)
+    label_13 = Label(root, text="Subject 1",bg="pink",width=20,font=("bold", 10))
+    label_13.grid(row=12,column=0)
+    entry_13 = Entry(root)
+    gradelist.append(entry_3.get())
+    entry_13.grid(row=12,column=3)
+    entry_13_1 = Entry(root)
+    entry_13_1.grid(row=12,column=4)
+    creditlist.append(entry_3_1.get())
+    label_14 = Label(root, text="Subject 2",bg="pink",width=20,font=("bold", 10))
+    label_14.grid(row=13,column=0)
+    entry_14 = Entry(root)
+    entry_14.grid(row=13,column=3)
+    
+    gradelist.append(entry_4.get())
+    entry_14_1 = Entry(root)
+    entry_14_1.grid(row=13,column=4)
+    creditlist.append(entry_4_1.get())
+    label_15 = Label(root, text="Subject 3",bg="pink",width=20,font=("bold", 10))
+    label_15.grid(row=14,column=0)
+    entry_15 = Entry(root)
+    entry_15.grid(row=14,column=3)
+    
+    gradelist.append(entry_5.get())
+    entry_15_1 = Entry(root)
+    creditlist.append(entry_15_1.get())
+    entry_15_1.grid(row=14,column=4)
+    label_16 = Label(root, text="Subject 4",bg="pink",width=20,font=("bold", 10))
+    label_16.grid(row=15,column=0)
+    entry_16 = Entry(root)
+    entry_16.grid(row=15,column=3)
+    
+    gradelist.append(entry_6.get())
+    entry_16_1 = Entry(root)
+    entry_16_1.grid(row=15,column=4)
+    creditlist.append(entry_6_1.get())
+    label_17 = Label(root, text="Subject 5",bg="pink",width=20,font=("bold", 10))
+    label_17.grid(row=16,column=0)
+    entry_17 = Entry(root)
+    
+    entry_17.grid(row=16,column=3)
+    
+    gradelist.append(entry_17.get())
+    
+    entry_17_1 = Entry(root)
+    entry_17_1.grid(row=16,column=4)
+    creditlist.append(entry_7_1.get())
+    label_18 = Label(root, text="Subject 6",bg="pink",width=20,font=("bold", 10))
+    label_18.grid(row=17,column=0)
+    entry_18 = Entry(root)
+    
+    gradelist.append(entry_8.get())
+    entry_18.grid(row=17,column=3)
+    entry_18_1 = Entry(root)
+    entry_18_1.grid(row=17,column=4)
+    creditlist.append(entry_8_1.get())
+    def gradee(grd):
+        dictionary = {'O':10,'A+':9,'A':8,'B+':7,'B':6,'C':5,'D':4,'E':3,'F':2,'I':1,'R':0 }
+        return(dictionary[grd])
+    '''def calculate():
+        
+        total =0
+        gained = 0
+        for i in range(len(gradelist)):
+            print(10*creditlist[i])
+            print(grade(gradelist[i])*creditlist[i])'''
+    tgpa_2 =[]
+    def calculatee():
+        total = int(entry_13_1.get())*10 + int(entry_14_1.get())*10 + int(entry_15_1.get())*10 + int(entry_16_1.get())*10 + int(entry_17_1.get())*10 + int(entry_18_1.get())*10
+        gained = int(entry_13_1.get())*(gradee(entry_13.get())) + int(entry_14_1.get())*(gradee(entry_14.get())) + int(entry_15_1.get())*(gradee(entry_15.get())) + int(entry_16_1.get())*(gradee(entry_16.get())) + int(entry_17_1.get())*(gradee(entry_17.get())) + int(entry_18_1.get())*(gradee(entry_18.get()))
+        t = (gained/total)*10
+        t = float("{0:.2f}".format(t))
+        laavel = Label(root, text=str(t),width=20,font=("bold", 10))
+        laavel.grid(row=12,column=8)
+        tgpa_2.append(t)
+        return(t)
+        print(tgpa_2)
+    btn1=Button(root, text='CALCULATE TGAP',width=20,bg='brown',fg='white') 
+    btn1.grid(row=12,column=6)
+    btn1.config(command = calculatee)
+
+    def finalcgpa():
+        total_cgpa= (calculate() + calculatee())/2
+        total_cgpa = float("{0:.2f}".format(total_cgpa))
+        laavel = Label(root, text=str(total_cgpa),width=20,font=("bold", 10))
+        laavel.grid(row=22,column=1)
+        if(total_cgpa >= 9):
+            messagebox.showinfo("Very Good: Keep it up !")
+        elif(total_cgpa >= 8):
+            messagebox.showinfo("Need to do little hardword to be best")
+        elif(total_cgpa >= 7):
+            messagebox.showinfo("You are in average little push can change your CGPA to best")
+        elif(total_cgpa >= 6):
+            messagebox.showinfo("Stop wasting time, Start studing you can do it")
+        else:
+            messagebox.showinfo("Hard work required!")
+        
+
+                
+
+    btn1=Button(root, text='CALCULATE CGAP',width=22,bg='green',fg='white') 
+    btn1.grid(row=22,column=0)
+    btn1.config(command = finalcgpa)
+        
+    root.mainloop()
+    
+
+
+
+def mainfun1():
+    from tkinter import messagebox
+    class App:
+            def __init__(self,parent):
+                    self.parent = parent
+                    self.frame_1 = Frame(parent)
+                    self.frame_1.pack()
+		
+                    self.lbl_1 = Label(self.frame_1,text="Current CGPA :",fg="blue")
+                    self.lbl_1.grid(row=0,column=0)
+                    self.entry_1 = Entry(self.frame_1)
+                    self.entry_1.grid(row=0,column=1)
+
+                    self.lbl_2 = Label(self.frame_1,text="Units Completed :",fg="blue")
+                    self.lbl_2.grid(row=1,column=0)
+                    self.entry_2 = Entry(self.frame_1)
+                    self.entry_2.grid(row=1,column=1)
+
+                    self.lbl_3 = Label(self.frame_1,text="Number of Courses to add :",fg="blue")
+                    self.lbl_3.grid(row=2,column=0)
+                    self.entry_3 = Entry(self.frame_1)
+                    self.entry_3.grid(row=2,column=1)		
+		
+                    self.btn_1 = Button(parent,text="Add Courses !",bg="green",fg="white",command=self.add_courses)
+                    self.btn_1.pack(pady=8)
+
+                    self.frame_2 = Frame(parent)
+                    self.frame_2.pack()
+		
+            def add_courses(self):
+                    if ((self.entry_3.get() != '') & (self.entry_3.get().isdigit())):
+                            self.num_courses = int(self.entry_3.get())
+                            self.grades_list = []
+                            self.units_list = []
+                            self.lbl_units = Label(self.frame_2,text="Course Credits:",font=("bold", 15))
+                            self.lbl_units.grid(row=0,column=0)
+                            self.lbl_grades = Label(self.frame_2,text="Grades :",font=("bold", 15))
+                            self.lbl_grades.grid(row = 0,column=1)
+                            for i in range (0, self.num_courses):				
+                                    self.units_list.append(Spinbox(self.frame_2,values=(1,2,3,4,5,20)))
+                                    self.units_list[i].grid(row = i+1,column = 0,padx=10,pady=10)
+				
+                                    self.grades_list.append(Spinbox(self.frame_2,values = ("O","A+","A","B+","B","C","D","E","F","I","R")))
+                                    self.grades_list[i].grid(row = i+1,column=1,padx=10,pady=10)
+                            self.btn_calcCG = Button(self.parent,text="Calculate CGPA",bg="brown",fg="white",command = self.calc_CG)
+                            self.btn_calcCG.pack(pady=8)
+                            self.btn_1.config(state = DISABLED)
+                    else:
+                            messagebox.showinfo("Hey ! ", "Enter a Valid Value")
+
+            def calc_CG(self):
+                    print ("Calculating !")
+                    credits_this_sem = 0
+                    units_this_sem = 0
+                    for j in range (0,self.num_courses):
+                            credits_this_sem = credits_this_sem + int(self.units_list[j].get())*(self.grade(self.grades_list[j].get()))
+                            units_this_sem = units_this_sem + int(self.units_list[j].get())
+                    final_cgpa = (credits_this_sem + float(self.entry_1.get())*int(self.entry_2.get())) / (units_this_sem+int(self.entry_2.get()))
+                    messagebox.showinfo("Predicted CGPA ", str(final_cgpa))	
+		
+
+            def grade(self,grd):
+                    dictionary = {'O':10,'A+':9,'A':8,'B+':7,'B':6,'C':5,'D':4,'E':3,'F':2,'I':1,'R':0 }
+                    return(dictionary[grd])
+    root=Tk()
+    app = App(root)
+    root.mainloop()
+
+
+
+
+
+
+    
+
+from tkinter import *
+
+root = Tk()
+root.configure(background="orange")
+root.geometry('600x600')
+root.title("Registration Form")
+
+label_0 = Label(root, text="Student Detail",fg="blue",bg="orange",width=20,font=("bold", 20))
+label_0.place(x=110,y=53)
+
+
+label_1 = Label(root, text="FullName",bg="orange",width=20,font=("bold", 10))
+label_1.place(x=100,y=130)
+
+entry_1 = Entry(root)
+entry_1.place(x=260,y=130)
+
+label_2 = Label(root, text="Email",bg="orange",width=20,font=("bold", 10))
+label_2.place(x=88,y=180)
+
+entry_2 = Entry(root)
+entry_2.place(x=260,y=180)
+
+label_3 = Label(root, text="Gender",bg="orange",width=20,font=("bold", 10))
+label_3.place(x=90,y=230)
+var = IntVar()
+Radiobutton(root, text="Male",padx = 5, variable=var, value=1).place(x=235,y=230)
+Radiobutton(root, text="Female",padx = 20, variable=var, value=2).place(x=290,y=230)
+
+label_4 = Label(root, text="Course",bg="orange",width=20,font=("bold", 10))
+label_4.place(x=90,y=280)
+
+list1 = ['CSE','MEC','IT','ECE','EEE','ANIME'];
+c=StringVar()
+droplist=OptionMenu(root,c, *list1)
+droplist.config(width=15)
+c.set('select your course') 
+droplist.place(x=260,y=280)
+var1 = IntVar()
+
+Checkbutton(root, text="I AGREE", variable=var1).place(x=235,y=330)
+
+
+
+btn1=Button(root, text='Submit & Calculate Cgpa',width=20,bg='brown',fg='white')
+btn1.place(x=200,y=380)
+btn1.config(command=mainfun)
+
+btn1=Button(root, text='Submit & Pridict Tgpa',width=20,bg='blue',fg='white')
+btn1.place(x=200,y=430)
+btn1.config(command=mainfun1)
+
+Button(root, text='Reset',width=20,bg='green',fg='white').place(x=200,y=480)
+
+label_5 = Label(root, text="CGPA CALCULATOR  ",fg="purple",bg="orange",width=20,font=("bold", 20))
+label_5.place(x=120,y=10)
+
+label_6 = Label(root, text="CREATE YOURSELF",fg="purple",bg="orange",width=20,font=("bold", 20))
+label_6.place(x=90,y=520)
+root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
